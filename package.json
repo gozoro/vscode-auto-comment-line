@@ -1,0 +1,17 @@
+{
+	"name": "auto-comment-line",
+	"displayName": "Auto Comment Line",
+	"description": "Automatically adds a line comment on the next line after only one line or after only two lines with a comment.",
+	"version": "1.0.0",
+	"publisher": "Roman Bolovintsev",
+
+	"engines": {
+		"vscode": ">=1.40.0"
+	},
+	"license": "MIT",
+	"keywords": [],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": []
+}
