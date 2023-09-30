@@ -4,7 +4,6 @@
 	"description": "Automatically adds a line comment on the next line after only one line or after only two lines with a comment.",
 	"version": "1.0.0",
 	"publisher": "Roman Bolovintsev",
-
 	"engines": {
 		"vscode": ">=1.40.0"
 	},
@@ -17,6 +16,60 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
-	"main": "./src/extension.js"
+	"activationEvents": [
+
+		"onStartupFinished"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+        "configuration": {
+            "title": "Auto Comment Line",
+            "properties": {
+
+				"auto-comment-line.afterTwoLines": {
+                    "type": "boolean",
+                    "default": false,
+					"description": "When enabled, a new comment line is inserted when two previous lines also contain a comment line."
+                },
+
+				"auto-comment-line.doubleSlashLangs": {
+					"type": "array",
+					"default": ["php", "go", "javascript", "typescript", "jsonc", "c", "cpp", "csharp", "fsharp", "groovy", "java",
+								"less", "objective-c", "objective-cpp", "rust", "scss", "sass", "vue", "swift", "markdown",
+								"javascriptreact", "typescriptreact"],
+					"description": "List of languages where the comment character is a double slash: //",
+					"uniqueItems": true
+				},
+
+				"auto-comment-line.tripleSlashLangs": {
+					"type": "array",
+					"default": ["csharp"],
+					"description": "List of languages where the comment character is a triple slash: ///",
+					"uniqueItems": true
+				},
+
+				"auto-comment-line.hashLangs": {
+					"type": "array",
+					"default": ["bash", "dockerfile", "yaml", "makefile", "perl", "powershell", "python", "r", "ruby", "coffeescript"],
+					"description": "List of languages where the comment character is a hash: #",
+					"uniqueItems": true
+				},
+
+				"auto-comment-line.semicolonLangs": {
+					"type": "array",
+					"default": ["clojure"],
+					"description": "List of languages where the comment character is a semicolon: ;",
+					"uniqueItems": true
+				},
+
+				"auto-comment-line.doubleHyphenLangs": {
+					"type": "array",
+					"default": ["sql"],
+					"description": "List of languages where the comment character is a double hyphen: --",
+					"uniqueItems": true
+				}
+            }
+        }
+    }
+
 }
