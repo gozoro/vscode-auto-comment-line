@@ -4,6 +4,7 @@
 	"description": "Automatically adds a line comment on the next line after only one line or after only two lines with a comment.",
 	"version": "1.0.0",
 	"publisher": "Roman Bolovintsev",
+	"repository": "https://github.com/gozoro/vscode-auto-comment-line",
 	"engines": {
 		"vscode": ">=1.40.0"
 	},
