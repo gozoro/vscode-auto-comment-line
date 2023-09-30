@@ -9,9 +9,14 @@
 		"vscode": ">=1.40.0"
 	},
 	"license": "MIT",
-	"keywords": [],
+	"keywords": [
+        "auto",
+        "comment",
+        "line"
+    ],
 	"categories": [
 		"Other"
 	],
-	"activationEvents": []
+	"activationEvents": [],
+	"main": "./src/extension.js"
 }
