@@ -9,6 +9,7 @@
 		"vscode": ">=1.40.0"
 	},
 	"license": "MIT",
+	"icon": "./img/icon.png",
 	"keywords": [
         "auto",
         "comment",
