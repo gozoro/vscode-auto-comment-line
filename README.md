@@ -3,5 +3,59 @@
 
 
 Visual Studio Code does not automatically insert single-line comments by default.
-This extension automatically adds a line comment on the next line after only one line or after only two lines with a single line comment.
+This extension automatically inserts a single line comment on the next line after only one line or after only two lines with a single line comment.
 
+## Usage
+
+By default, a comment is automatically inserted after one single line comment.
+
+![Demo](https://raw.githubusercontent.com/gozoro/vscode-auto-comment-line/main/img/auto-comment-line.gif)
+
+But you can use the `afterTwoLines: true` parameter to automatically insert a comment after only two single line comments.
+
+![Demo](https://raw.githubusercontent.com/gozoro/vscode-auto-comment-line/main/img/auto-comment-line-after-two.gif)
+
+
+
+### Default supported languages
+
+| Comment name | Comment style | Language identifiers |
+| ---- | ------- | ------- |
+| doubleSlash | `//` | `php`, `go`, `javascript`, `typescript`, `jsonc`, `c`, `cpp`, `csharp`, `fsharp`, `groovy`, `java`,`less`, `objective-c`, `objective-cpp`, `rust`, `scss`, `sass`, `vue`, `swift`, `markdown`, `javascriptreact`, `typescriptreact` |
+| tripleSlash | `///` | `csharp`  |
+| hash | `#` | `bash`, `dockerfile`, `yaml`, `makefile`, `perl`, `powershell`, `python`, `r`, `ruby`, `coffeescript`  |
+| semicolon | `;` |  `clojure` |
+| doubleHyphen | `--` |  `sql` |
+
+
+
+## Configuration
+
+You can change default parameters in your settings.json.
+
+You can change this parameter to automatically insert a comment after only two single line comments.
+
+```json
+// When enabled, a new comment line is inserted when two previous lines also contain a comment line.
+"auto-comment-line.afterTwoLines": true,
+```
+
+You can change the default language list for each comment style.
+
+```json
+// List of languages where the comment character is a double slash: //
+"auto-comment-line.doubleSlashLangs": ["php", "javascript"],
+
+// List of languages where the comment character is a triple slash: ///
+"auto-comment-line.tripleSlashLangs": ["csharp"],
+
+// List of languages where the comment character is a hash: #
+"auto-comment-line.hashLangs": ["bash"],
+
+// List of languages where the comment character is a semicolon: ;
+"auto-comment-line.semicolonLangs": ["clojure"],
+
+// List of languages where the comment character is a double hyphen: --
+"auto-comment-line.doubleHyphenLangs": ["sql"],
+
+```
