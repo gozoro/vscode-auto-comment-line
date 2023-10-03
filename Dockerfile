@@ -17,8 +17,12 @@ ENV HOME /home/vsce
 
 RUN mkdir -p /home/vsce/.config
 
+# owner is root
 COPY . /extension
+
+# owner is vsce
 RUN cp -r /extension /home/vsce/extension
+
 WORKDIR /home/vsce/extension
 
 
