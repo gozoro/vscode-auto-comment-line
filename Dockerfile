@@ -5,7 +5,7 @@ RUN apt install -y nodejs npm
 RUN useradd -ms /bin/bash vsce
 
 # for generate extension
-#RUN npm install -g yo generator-code
+RUN npm install -g yo generator-code
 
 # for publish extension
 RUN npm install -g @vscode/vsce
