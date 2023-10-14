@@ -94,7 +94,8 @@ function getExtensionLanguageEnterRules()
 	{
 		for(let langId of extensionConfig[v + 'Langs'] )
 		{
-			langRules[langId] = [];
+			if(!langRules[langId])
+				langRules[langId] = [];
 
 			for(let rule of rules[v + 'Rules'])
 			{
