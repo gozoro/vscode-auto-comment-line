@@ -35,14 +35,14 @@ You can change default parameters in your settings.json.
 
 You can change this parameter to automatically insert a comment after only two single line comments.
 
-```json
+```jsonc
 // When enabled, a new comment line is inserted when two previous lines also contain a comment line.
 "auto-comment-line.afterTwoLines": true,
 ```
 
 You can change the default language list for each comment style.
 
-```json
+```jsonc
 // List of languages where the comment character is a double slash: //
 "auto-comment-line.doubleSlashLangs": ["php", "javascript"],
 
