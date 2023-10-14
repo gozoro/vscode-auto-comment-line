@@ -2,7 +2,7 @@
 	"name": "auto-comment-line",
 	"displayName": "Auto Comment Line",
 	"description": "Automatically inserts a single line comment on the next line after only one line or after only two lines with a single line comment.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "RomanBolovintsev",
 	"repository": "https://github.com/gozoro/vscode-auto-comment-line",
 	"engines": {
